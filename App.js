@@ -1,20 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {bodyColor} from './src/styles/_variables';
-import Menu from './src/components/menu';
+import {View} from 'react-native';
+
+import AppNavigation from './src/navigation/AppNavigation';
 
 export default function () {
   return (
-    <View style={styles.contanier}>
-      <Text>From app .s</Text>
-      <Menu />
+    <View style={{flex: 1}}>
+      <AppNavigation />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  contanier: {
-    flex: 1,
-    backgroundColor: bodyColor,
-  },
-});
