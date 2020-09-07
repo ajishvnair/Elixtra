@@ -1,0 +1,6 @@
+{
+    "eslint.enable": true,
+    "conventionalCommits.scopes": [
+        "android"
+    ]
+}
