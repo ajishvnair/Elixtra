@@ -4,7 +4,8 @@ const styles = StyleSheet.create({
   container: {
     // left: 10,
     // right: 10,
-    padding: 30,
+    paddingHorizontal: 30,
+    paddingVertical: 10,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
