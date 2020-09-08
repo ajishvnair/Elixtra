@@ -27,7 +27,17 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   button: {
-    color: 'blue',
+    backgroundColor: '#00008B',
+    paddingVertical: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonTitle: {
+    color: 'white',
+    alignSelf: 'center',
+    marginRight: 5,
   },
   //   orderContent: {
   //     zIndex: 50,
