@@ -5,6 +5,7 @@ import {capitalize} from '../../common/common-methods';
 import styles from './styles';
 import Title from '../../components/title';
 import MedicineDetails from '../../components/medicine-details';
+import ContactDetails from '../../components/contact-details';
 
 export default function ({navigation, route}) {
   // order details from navigation
@@ -73,7 +74,10 @@ export default function ({navigation, route}) {
           }}>
           View Prescription
         </Text>
+
         <View style={styles.whiteBox} />
+        {/* contact details */}
+        <ContactDetails />
       </View>
     </View>
   );
