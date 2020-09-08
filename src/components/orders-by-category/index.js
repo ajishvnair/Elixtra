@@ -6,14 +6,22 @@ import {capitalize} from '../../common/common-methods';
 
 import styles from './styles';
 
-export default function ({activeTab}) {
+export default function ({activeTab, navigation}) {
   const [data, setData] = useState([]);
+  /**
+   * to filter out orders based on status
+   */
   useEffect(() => {
     const dataByCategory = ordersData.filter(
       (order) => order.status === activeTab,
     );
     setData(dataByCategory);
   }, [activeTab, setData]);
+
+  const handleViewOrderDetails = (order) => {
+    navigation.navigate('Order', {order});
+  };
+
   return (
     <ScrollView>
       {data.map((order, index) => (
@@ -30,7 +38,7 @@ export default function ({activeTab}) {
           <Text style={styles.orderStatus}>
             {`Status: ${capitalize(order.status)}`}
           </Text>
-          <TouchableHighlight>
+          <TouchableHighlight onPress={() => handleViewOrderDetails(order)}>
             <View style={styles.button}>
               <Text style={styles.buttonTitle}>VIEW ORDER DETAILS </Text>
               {order.status === 'pending' && (
