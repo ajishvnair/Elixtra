@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-export default function ({title}) {
+export default function ({title, size = 35}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={{...styles.text, fontSize: size}}>{title}</Text>
     </View>
   );
 }
