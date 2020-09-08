@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
+import {View, ScrollView, Text, Button} from 'react-native';
+// import {Button} from 'react-native-elements';
 import {ordersData} from '../../common/data-provider';
+
+import styles from './styles';
 
 export default function ({activeTab}) {
   const [data, setData] = useState([]);
@@ -11,8 +14,19 @@ export default function ({activeTab}) {
     setData(dataByCategory);
   }, [activeTab, setData]);
   return (
-    <View style={{marginTop: 30}}>
-      <Text>{JSON.stringify(data)}</Text>
-    </View>
+    <ScrollView>
+      {data.map((order, index) => (
+        <View key={index} style={styles.container}>
+          <Text style={styles.orderTitle}>Order No {order.orderNo}</Text>
+          <Text style={styles.orderTime}>ORDER TIME</Text>
+          <Text
+            style={
+              styles.orderTime
+            }>{`${order.orderDate} at ${order.orderTime}`}</Text>
+          <Text style={styles.orderStatus}>{'Status: Pending'}</Text>
+          <Button title="VIEW ORDER DETAILS" color="blue" />
+        </View>
+      ))}
+    </ScrollView>
   );
 }

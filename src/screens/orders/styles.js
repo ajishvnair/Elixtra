@@ -6,6 +6,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: bodyColor,
   },
+  ordersContainer: {
+    paddingHorizontal: 30,
+    paddingVertical: 10,
+    height: '70%',
+  },
 });
 
 export default styles;

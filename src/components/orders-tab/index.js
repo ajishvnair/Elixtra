@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, TouchableHighlight} from 'react-native';
+import {View, Text, TouchableWithoutFeedback} from 'react-native';
 import styles from './styles';
 
 export default function ({activeTab, setActiveTab}) {
@@ -9,7 +9,7 @@ export default function ({activeTab, setActiveTab}) {
   };
   return (
     <View style={styles.container}>
-      <TouchableHighlight onPress={() => onTabChange('pending')}>
+      <TouchableWithoutFeedback onPress={() => onTabChange('pending')}>
         <View
           style={{
             ...styles.tabContainer,
@@ -23,8 +23,8 @@ export default function ({activeTab, setActiveTab}) {
             Pending
           </Text>
         </View>
-      </TouchableHighlight>
-      <TouchableHighlight onPress={() => onTabChange('completed')}>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => onTabChange('completed')}>
         <View
           style={{
             ...styles.tabContainer,
@@ -38,8 +38,8 @@ export default function ({activeTab, setActiveTab}) {
             Completed
           </Text>
         </View>
-      </TouchableHighlight>
-      <TouchableHighlight onPress={() => onTabChange('canceled')}>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => onTabChange('canceled')}>
         <View
           style={{
             ...styles.tabContainer,
@@ -53,7 +53,7 @@ export default function ({activeTab, setActiveTab}) {
             Canceled
           </Text>
         </View>
-      </TouchableHighlight>
+      </TouchableWithoutFeedback>
     </View>
   );
 }

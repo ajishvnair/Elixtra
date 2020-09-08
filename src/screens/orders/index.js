@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import Menu from '../../components/menu';
 import styles from './styles';
 import Tabs from '../../components/orders-tab';
@@ -12,7 +12,7 @@ export default function () {
     <View style={styles.container}>
       <Title title="Orders" />
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-      <View>
+      <View style={styles.ordersContainer}>
         <OrdersData activeTab={activeTab} />
       </View>
       <Menu />
