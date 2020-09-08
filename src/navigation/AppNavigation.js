@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {bodyColor} from '../styles/_variables';
 import Orders from '../screens/orders';
 import SingleOrder from '../screens/single-order';
 
@@ -17,7 +18,16 @@ export default function () {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="Order" component={SingleOrder} />
+        <Stack.Screen
+          name="Order"
+          component={SingleOrder}
+          options={{
+            title: null,
+            headerStyle: {
+              backgroundColor: bodyColor,
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
