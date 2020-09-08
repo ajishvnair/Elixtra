@@ -64,6 +64,16 @@ export default function ({navigation, route}) {
         {order.medicines.map((medicine, index) => (
           <MedicineDetails medicine={medicine} key={index} />
         ))}
+
+        <Text
+          style={{
+            ...styles.generalFont,
+            ...styles.titleFont,
+            ...styles.mtHigh,
+          }}>
+          View Prescription
+        </Text>
+        <View style={styles.whiteBox} />
       </View>
     </View>
   );

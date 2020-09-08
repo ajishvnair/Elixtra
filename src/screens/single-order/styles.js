@@ -42,6 +42,12 @@ const styles = StyleSheet.create({
   mlLow: {
     marginLeft: 5,
   },
+  whiteBox: {
+    margin: 10,
+    height: 50,
+    width: 50,
+    backgroundColor: 'white',
+  },
 });
 
 export default styles;
