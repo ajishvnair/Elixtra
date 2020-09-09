@@ -15,7 +15,7 @@ export default function ({navigation}) {
       <View style={styles.ordersContainer}>
         <OrdersData activeTab={activeTab} navigation={navigation} />
       </View>
-      <Menu />
+      <Menu route="orders" navigation={navigation} />
     </View>
   );
 }
