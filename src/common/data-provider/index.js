@@ -89,12 +89,12 @@ export const ordersData = [
       ,
     ],
   },
-  {
-    orderNo: '#12390',
-    orderTime: '9:58 PM',
-    orderDate: '2 June 2020',
-    status: 'canceled',
-    comment: '',
-    medicines: [],
-  },
+  // {
+  //   orderNo: '#12390',
+  //   orderTime: '9:58 PM',
+  //   orderDate: '2 June 2020',
+  //   status: 'canceled',
+  //   comment: '',
+  //   medicines: [],
+  // },
 ];

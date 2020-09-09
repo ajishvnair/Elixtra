@@ -3,6 +3,7 @@ import {View, ScrollView, Text, TouchableHighlight} from 'react-native';
 import {Icon} from 'react-native-elements';
 import {ordersData} from '../../common/data-provider';
 import {capitalize} from '../../common/common-methods';
+import EmptyOrders from '../empty-orders';
 
 import styles from './styles';
 
@@ -22,7 +23,7 @@ export default function ({activeTab, navigation}) {
     navigation.navigate('Order', {order});
   };
 
-  return (
+  return (data || []).length !== 0 ? (
     <ScrollView>
       {data.map((order, index) => (
         <View key={index} style={styles.container}>
@@ -55,5 +56,7 @@ export default function ({activeTab, navigation}) {
         </View>
       ))}
     </ScrollView>
+  ) : (
+    <EmptyOrders />
   );
 }

@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     // opacity: 0.5,
     backgroundColor: 'rgba(121, 210, 209, 0.600)',
-    marginTop: 10,
+    marginTop: 15,
     padding: 20,
 
     borderRadius: 10,

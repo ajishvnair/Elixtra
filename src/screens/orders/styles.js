@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: bodyColor,
   },
   ordersContainer: {
+    display: 'flex',
     paddingHorizontal: 30,
     paddingVertical: 10,
     height: '70%',
