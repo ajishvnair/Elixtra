@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import {Icon} from 'react-native-elements';
 import {capitalize} from '../../common/common-methods';
 import styles from './styles';
@@ -11,7 +11,7 @@ export default function ({navigation, route}) {
   // order details from navigation
   const {params: {order = {}} = {}} = route;
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Title title={`Order No ${order.orderNo}`} size={20} />
       {/* Time */}
       <View style={styles.orderDetails}>
@@ -79,6 +79,6 @@ export default function ({navigation, route}) {
         {/* contact details */}
         <ContactDetails />
       </View>
-    </View>
+    </ScrollView>
   );
 }

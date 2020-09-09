@@ -32,7 +32,6 @@ export const ordersData = [
         name: 'mole',
         quantity: '200g',
       },
-      ,
     ],
   },
   {
@@ -50,7 +49,6 @@ export const ordersData = [
         name: 'mole',
         quantity: '200g',
       },
-      ,
     ],
   },
   {
@@ -68,7 +66,6 @@ export const ordersData = [
         name: 'mole',
         quantity: '200g',
       },
-      ,
     ],
   },
   {
@@ -86,7 +83,22 @@ export const ordersData = [
         name: 'mole',
         quantity: '200g',
       },
-      ,
+      {
+        name: 'Paracetamole',
+        quantity: '100g',
+      },
+      {
+        name: 'mole',
+        quantity: '200g',
+      },
+      {
+        name: 'mole',
+        quantity: '200g',
+      },
+      {
+        name: 'mole',
+        quantity: '200g',
+      },
     ],
   },
   // {

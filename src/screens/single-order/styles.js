@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   orderDetails: {
     left: 35,
     marginTop: 5,
+    marginBottom: 20,
   },
   generalFont: {
     fontSize: 15,
